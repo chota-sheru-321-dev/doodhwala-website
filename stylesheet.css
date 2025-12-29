@@ -1,0 +1,181 @@
+body {
+  background-image: url("https://images.unsplash.com/photo-1500595046743-cd271d694d30");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.head {
+  font-size: 36px;
+  color: white;
+  backdrop-filter: blur(5px);
+  padding: 10px 20px;
+  border-radius: 12px;
+}
+
+.head-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 400px;
+  padding: 20px;
+  border-radius: 36px;
+  border: 2px solid rgba(255,255,255,0.6);
+  background-color: rgba(0,0,0,0.5);
+  align-items: center;
+}
+
+/* Your existing checkbox styles for .option, .checkmark, etc. */
+
+
+
+/* Option container */
+.option {
+  color: white;
+  display: flex;
+  align-items: center;
+  width: 100%;             /* fill parent width */
+  padding: 10px 15px;
+  background-color: rgba(252, 244, 244, 0.1); /* optional hover effect */
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.option:hover {
+  background-color: rgba(255,255,255,0.2);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  transform: translateY(-5px);
+}
+
+/* Hide native checkbox */
+.option input {
+  display: none;
+}
+
+/* Custom checkbox */
+.checkmark {
+  width: 25px;
+  height: 25px;
+  background-color: lightgray;
+  border-radius: 5px;
+  margin-right: 15px;
+  position: relative;
+  flex-shrink: 0; /* prevent shrinking */
+  transition: 0.3s;
+}
+
+.option:hover .checkmark {
+  background-color: #4facfe;
+}
+
+.option input:checked ~ .checkmark {
+  background-color: #00c6ff;
+}
+
+/* Tick mark */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 8px;
+  top: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+.option input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Make text take full space */
+.option span + text {
+  flex: 1;
+}
+
+.enter {
+  width: 50%;
+  padding: 12px 0;
+  font-size: 20px;
+  color: white;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  border: none;
+  animation: moveGradient 3s linear infinite;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 20px;
+}
+@keyframes moveGradient {
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+.enter:hover {
+  background: linear-gradient(90deg, #00f2fe, #4facfe);
+  transform: scale(1.05);
+}
+
+.enter:active {
+  transform: scale(0.95);
+}
+
+/* Container for top-right buttons */
+.top-right-buttons {
+  position: absolute;  /* position at top-right */
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 15px; /* space between buttons */
+  z-index: 100; /* make sure it’s on top */
+}
+
+/* Common button styling */
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px; /* rounded corners */
+  cursor: pointer;
+  transition: 0.3s;
+  color: white;
+}
+
+/* Login button */
+.btn.login {
+  background: #4facfe; /* gradient can be added if desired */
+}
+
+.btn.login:hover {
+  background: #00f2fe;
+  transform: scale(1.05);
+}
+
+/* Sign Up button */
+.btn.signup {
+  background: #43e97b; /* green gradient */
+}
+
+.btn.signup:hover {
+  background: #38d39f;
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #fff, 0 0 20px #4facfe;
+}
