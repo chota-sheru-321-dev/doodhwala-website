@@ -170,13 +170,48 @@ body {
   .enter {
     font-size: 1rem;
   }
+}
 
   .choose {
-  color: white;
-  font-size: 1.4rem;
-  margin-bottom: 10px;
+  font-size: clamp(1.8rem, 4vw, 2.4rem); /* responsive size */
+  font-weight: 800;
   text-align: center;
+  color: #ffffff;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  /* Glow effect */
+  text-shadow:
+    0 0 5px rgba(79,172,254,0.6),
+    0 0 15px rgba(0,242,254,0.6);
+
+  /* Soft underline */
+  position: relative;
 }
+
+.choose::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -8px;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 3px;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+}
+@media (max-width: 600px) {
+  .head-2 {
+    width: 90%;
+    gap: 18px;
+  }
+
+  .choose {
+    font-size: 2rem;
+  }
+}
+
 
 
 
