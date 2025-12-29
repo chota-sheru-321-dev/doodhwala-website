@@ -30,7 +30,7 @@ body {
 
 /* TITLE */
 .head {
-  color: white;
+  color: black;
   backdrop-filter: blur(6px);
   padding: 12px 20px;
   border-radius: 14px;
@@ -211,6 +211,7 @@ body {
     font-size: 2rem;
   }
 }
+
 
 
 
