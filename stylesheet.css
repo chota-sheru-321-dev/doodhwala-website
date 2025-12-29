@@ -170,6 +170,14 @@ body {
   .enter {
     font-size: 1rem;
   }
+
+  .choose {
+  color: white;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  text-align: center;
 }
+
+
 
 
