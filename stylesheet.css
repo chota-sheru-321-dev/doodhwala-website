@@ -1,181 +1,175 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* BODY */
 body {
   background-image: url("https://images.unsplash.com/photo-1500595046743-cd271d694d30");
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
   font-family: 'Courier New', Courier, monospace;
-  
+  position: relative;
 }
 
+/* MAIN WRAPPER */
 .main {
+  width: 90%;
+  max-width: 420px;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
 }
 
+/* TITLE */
 .head {
-  font-size: 36px;
   color: white;
-  backdrop-filter: blur(5px);
-  padding: 10px 20px;
-  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  padding: 12px 20px;
+  border-radius: 14px;
+  text-align: center;
 }
 
+.head h1 {
+  font-size: 2rem;
+}
+
+/* OPTIONS BOX */
 .head-2 {
+  width: 100%;
+  padding: 20px;
+  border-radius: 28px;
+  border: 2px solid rgba(255,255,255,0.6);
+  background-color: rgba(0,0,0,0.55);
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  width: 400px;
-  padding: 20px;
-  border-radius: 36px;
-  border: 2px solid rgba(255,255,255,0.6);
-  background-color: rgba(0,0,0,0.5);
-  align-items: center;
+  gap: 16px;
 }
 
-/* Your existing checkbox styles for .option, .checkmark, etc. */
-
-
-
-/* Option container */
+/* OPTION */
 .option {
-  color: white;
   display: flex;
   align-items: center;
-  width: 100%;             /* fill parent width */
-  padding: 10px 15px;
-  background-color: rgba(252, 244, 244, 0.1); /* optional hover effect */
-  border-radius: 12px;
+  gap: 15px;
+  padding: 12px 15px;
+  border-radius: 14px;
+  color: white;
   cursor: pointer;
   transition: 0.3s;
+  background-color: rgba(255,255,255,0.1);
 }
 
 .option:hover {
   background-color: rgba(255,255,255,0.2);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-  transform: translateY(-5px);
+  transform: translateY(-3px);
 }
 
-/* Hide native checkbox */
+/* HIDE RADIO */
 .option input {
   display: none;
 }
 
-/* Custom checkbox */
+/* CUSTOM RADIO */
 .checkmark {
-  width: 25px;
-  height: 25px;
+  width: 24px;
+  height: 24px;
   background-color: lightgray;
-  border-radius: 5px;
-  margin-right: 15px;
+  border-radius: 50%;
   position: relative;
-  flex-shrink: 0; /* prevent shrinking */
-  transition: 0.3s;
-}
-
-.option:hover .checkmark {
-  background-color: #4facfe;
+  flex-shrink: 0;
 }
 
 .option input:checked ~ .checkmark {
   background-color: #00c6ff;
 }
 
-/* Tick mark */
-.checkmark:after {
+.checkmark::after {
   content: "";
   position: absolute;
   display: none;
-  left: 8px;
-  top: 4px;
-  width: 5px;
+  width: 10px;
   height: 10px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  transform: rotate(45deg);
+  background: white;
+  border-radius: 50%;
+  top: 7px;
+  left: 7px;
 }
 
-.option input:checked ~ .checkmark:after {
+.option input:checked ~ .checkmark::after {
   display: block;
 }
 
-/* Make text take full space */
-.option span + text {
-  flex: 1;
-}
-
+/* ENTER BUTTON */
 .enter {
-  width: 50%;
-  padding: 12px 0;
-  font-size: 20px;
+  margin-top: 10px;
+  padding: 12px;
+  font-size: 1.1rem;
   color: white;
-  background: linear-gradient(90deg, #4facfe, #00f2fe);
   border: none;
-  animation: moveGradient 3s linear infinite;
-  border-radius: 12px;
+  border-radius: 16px;
   cursor: pointer;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
   transition: 0.3s;
-  margin-top: 20px;
-}
-@keyframes moveGradient {
-  0%{background-position:0% 50%;}
-  50%{background-position:100% 50%;}
-  100%{background-position:0% 50%;}
 }
 
 .enter:hover {
-  background: linear-gradient(90deg, #00f2fe, #4facfe);
   transform: scale(1.05);
 }
 
-.enter:active {
-  transform: scale(0.95);
-}
-
-/* Container for top-right buttons */
+/* TOP RIGHT BUTTONS */
 .top-right-buttons {
-  position: absolute;  /* position at top-right */
-  top: 20px;
-  right: 20px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
   display: flex;
-  gap: 15px; /* space between buttons */
-  z-index: 100; /* make sure it’s on top */
+  gap: 10px;
 }
 
-/* Common button styling */
+/* COMMON BUTTON */
 .btn {
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: bold;
+  padding: 8px 14px;
+  border-radius: 20px;
   border: none;
-  border-radius: 25px; /* rounded corners */
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: white;
   cursor: pointer;
   transition: 0.3s;
-  color: white;
 }
 
-/* Login button */
-.btn.login {
-  background: #4facfe; /* gradient can be added if desired */
+.login {
+  background: #4facfe;
 }
 
-.btn.login:hover {
-  background: #00f2fe;
+.signup {
+  background: #43e97b;
+}
+
+.btn:hover {
   transform: scale(1.05);
 }
 
-/* Sign Up button */
-.btn.signup {
-  background: #43e97b; /* green gradient */
+/* 📱 MOBILE OPTIMIZATION */
+@media (max-width: 480px) {
+  .head h1 {
+    font-size: 1.6rem;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .enter {
+    font-size: 1rem;
+  }
 }
 
-.btn.signup:hover {
-  background: #38d39f;
-  transform: scale(1.05);
-  box-shadow: 0 0 10px #fff, 0 0 20px #4facfe;
-}
+
