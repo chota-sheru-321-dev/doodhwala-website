@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url("https://media.istockphoto.com/id/477481234/photo/goat-milking.jpg?s=612x612&w=0&k=20&c=TO_IT-xl_-xqndNU1EXvcqW0ypBjyyCtTyzIZwr5rFk=")
+    no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.wrapper {
+  margin-top: 40px;
+  width: 420px;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  border-radius: 16px;
+  padding: 20px 30px;
+}
+
+.wrapper h1 {
+  font-size: 30px;
+  text-align: center;
+}
+
+.wrapper .input-box {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  margin: 30px 0;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+  color: #fff;
+}
+
+.input-box i {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+}
+
+.wrapper .remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin: -15px 0 15px;
+}
+
+.remember-forgot label input {
+  accent-color: #fff;
+  margin-right: 3px;
+}
+
+.remember-forgot a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+
+
+.wrapper .register-link {
+  text-align: center;
+  font-size: 14px;
+  margin: 20px 0 15px;
+}
+
+.wrapper .register-link p a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.wrapper .register-link p a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  color: rgb(241, 234, 234);
+  font-family: poppins;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: rgb(133, 136, 138);
+  padding: 10px 25px;
+  width: 100%;
+  border: none ;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: rgb(242, 243, 245);
+  background-color: rgb(89, 91, 88);
+}
+
+.btn:active {
+  margin-top: 3px;
+  margin-left: 3px;
+  background-color: rgb(12, 12, 12);
+  color: white;
+}

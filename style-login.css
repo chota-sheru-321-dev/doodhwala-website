@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  background: url("https://media.istockphoto.com/id/1064464800/photo/the-more-relaxed-the-cow-is-the-more-milk-youll-get.jpg?s=612x612&w=0&k=20&c=_a3N4-9BKUwFdx6OHijR8ET2ZHuiDXN-6YhMZhWvCyo=");
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.box {
+  margin-top: 40px;
+  width: 420px;
+  border: solid 2px rgba(255 , 255 ,255 , 0.5);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px 30px;
+  border-radius: 18px;
+}
+
+.box h1 {
+  font-size: 40px;
+  color: rgb(19, 94, 156);
+}
+
+.box .input-box {
+  width: 100%;
+  height: 50px;
+  position: relative;
+  margin: 30px 0;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  font-size: 16px;
+  color: rgb(224, 228, 231);
+  padding: 20px 45px 20px 20px;
+}
+
+.input-box ::placeholder {
+  color: rgb(255, 251, 251);
+}
+
+.input-box i {
+  position: absolute;
+  font-size: 20px;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.bttn {
+  color: white;
+  font-family: poppins;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: rgb(19, 94, 156);
+  padding: 10px 25px;
+  width: 100%;
+  border: none ;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.bttn:hover {
+  color: rgb(19, 94, 156);
+  background-color: rgb(74, 189, 210);
+}
+
+.bttn:active {
+  margin-top: 3px;
+  margin-left: 3px;
+  background-color: rgb(19, 94, 156);
+  color: white;
+}
+
+.box .remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin: -15px 0 15px ;
+}
+
+.remember-forgot label input {
+  accent-color: rgb(74, 189, 210);
+  margin-top: 3px;
+}
+
+.remember-forgot a {
+  text-decoration: none;
+  color: black;
+}
+
+.remember-forgot a:hover{
+  text-decoration: underline;
+}
+
+.register-link {
+  margin-top: 12px;
+}
+
+.register-link p a {
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link p a:hover {
+  text-decoration: underline;
+}
