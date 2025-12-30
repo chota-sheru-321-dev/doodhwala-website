@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Doodhwala.com</title>
   <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
   <div class="top-right-buttons">
-  <button class="btn login">Login</button>
-  <button class="btn signup">Sign Up</button>
+  <button class="btn login" onclick="openlogin()">Login</button>
+  <button class="btn signup" onclick="opensignup()">Sign Up</button>
 </div>
 
   <main class="main">
@@ -18,30 +17,39 @@
     </div>
 
     <div class="head-2">
-    <h2 class="choose">Choose your type</h2>
       <label class="option">
         <input type="radio" name="sexuality">
         <span class="checkmark"></span>
-        Insian Cow milk
+        Gay
       </label>
 
       <label class="option">
         <input type="radio" name="sexuality">
         <span class="checkmark"></span>
-        Russian Cow milk
+        Lesbian
       </label>
 
       <label class="option">
         <input type="radio" name="sexuality">
         <span class="checkmark"></span>
-        dairy milk
+        Straight
       </label>
 
       <button class="enter"> Enter </button>
     </div>
   </main>
+  <script>
+  function opensignup() {
+    window.location.href = "signup.html";
+    }
+  function openlogin() {
+    window.location.href = "login.html";
+  }
+  </script>
+
 </body>
 </html>
+
 
 
 
